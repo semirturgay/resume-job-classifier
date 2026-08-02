@@ -4,7 +4,7 @@ CPU-friendly text classifier that labels documents as **`resume`**, **`job_post`
 
 Use it to route text in hiring pipelines. Send only resume-like or job-like content to parsers, indexers, or LLM extraction steps.
 
-**Pre-trained weights:** [Hugging Face](https://huggingface.co/YOUR_USERNAME/resume-job-classifier)  
+**Pre-trained weights:** [Hugging Face](https://huggingface.co/semirturgay/resume-job-classifier)  
 **License:** Apache-2.0
 
 ## Quick start
@@ -24,7 +24,7 @@ from transformers import pipeline
 
 clf = pipeline(
     "text-classification",
-    model="YOUR_USERNAME/resume-job-classifier",
+    model="semirturgay/resume-job-classifier",
     top_k=None,
 )
 
