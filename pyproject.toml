@@ -1,0 +1,29 @@
+[project]
+name = "resume-job-classifier"
+version = "1.0.0"
+description = "CPU-only text classifier: resume | job_post | other"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Semir" }]
+dependencies = [
+    "transformers>=4.44.0",
+    "datasets>=3.0.0",
+    "torch>=2.2.0",
+    "scikit-learn>=1.5.0",
+    "numpy>=1.26.0",
+    "onnxruntime>=1.19.0",
+    "optimum[onnxruntime]>=1.21.0",
+    "huggingface-hub>=0.24.0",
+    "accelerate>=0.33.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5.0", "pytest>=8.0.0"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["training*", "inference*", "eval*", "export*"]

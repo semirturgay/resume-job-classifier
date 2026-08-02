@@ -1,0 +1,5 @@
+{
+    "labels": ["resume", "job_post", "other"],
+    "id2label": { "0": "resume", "1": "job_post", "2": "other" },
+    "label2id": { "resume": 0, "job_post": 1, "other": 2 }
+  }

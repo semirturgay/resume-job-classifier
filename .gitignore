@@ -1,0 +1,48 @@
+# Raw CSV imports (large, keep local)
+Dataset.csv
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Training artifacts
+checkpoints/
+runs/
+wandb/
+*.pt
+*.bin
+*.safetensors
+
+# Exported models (keep dir via .gitkeep)
+export/artifacts/*
+!export/artifacts/.gitkeep
+
+# Data (raw labeled data may be large or sensitive)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Planning docs (local only)
+docs/
+
+# Internal scripts (data import, HF publish, etc.)
+scripts/
+
+# IDE / OS
+.idea/
+.vscode/
+.cursor/
+.DS_Store
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
